@@ -7,7 +7,7 @@ One set contained 900 underwater images, which had distortions due to water refr
 The other set contained corresponding filtered (clearer) versions of the same images.
 I trained a U-NET model to map these degraded images to their filtered versions. The U-NET architecture is well-suited for this task because of its ability to capture fine details and context in images, thanks to its symmetrical structure—downsampling (encoder) to capture features, and upsampling (decoder) to restore the spatial dimensions.
 
-I split the dataset into 80% training and 20% testing. I also compared the performance of the model using three different loss functions: Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index (SSIM). PSNR gave the best results, as it focuses on the pixel-to-pixel differences between the original and predicted images, which helped in recovering clearer images with less noise.
+I split the dataset into 70% training and 30% testing. I also compared the performance of the model using three different loss functions: Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index (SSIM). PSNR gave the best results, as it focuses on the pixel-to-pixel differences between the original and predicted images, which helped in recovering clearer images with less noise.
 
 2. What are the filters used in the CNN and how do they work?
 In CNN, filters or kernels are small matrices (for example, 3x3, 5x5) that slide across the input image, performing convolutions. The main purpose of these filters is to detect specific features from the image, such as edges, corners, textures, and more complex patterns as the network goes deeper.
